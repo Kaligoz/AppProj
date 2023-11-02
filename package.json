@@ -1,6 +1,9 @@
 {
   "name": "project",
-  "dependencies": {},
+  "dependencies": {
+    "@splinetool/loader": "^0.9.492",
+    "@splinetool/runtime": "^0.9.492"
+  },
   "devDependencies": {
     "vite": "latest"
   },

@@ -1,3 +1,4 @@
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
@@ -65,43 +66,13 @@ function appendItemToShoppingListEl(item) {
     })
     
     shoppingListEl.append(newEl)
-}
+} 
 
-// Create a scene
-const scene = new THREE.Scene();
+//Spline test
 
-// Create a camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
+import { Application } from '@splinetool/runtime';
 
-// Create a renderer
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
+const canvas = document.getElementById('canvas3d');
 
-// Add the renderer to the scene-container
-const sceneContainer = document.getElementById('scene-container');
-sceneContainer.appendChild(renderer.domElement);
-
-// Create a simple cube
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-
-cube.position.y = 2.8; // Y-coordinate
-
-// Add the cube to the scene
-scene.add(cube);
-
-// Animation loop
-const animate = () => {
-    requestAnimationFrame(animate);
-
-    // Rotate the cube
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
-    // Render the scene
-    renderer.render(scene, camera);
-};
-
-animate();
+const splineApp = new Application(canvas);
+splineApp.load('https://prod.spline.design/s6ALY5XRHQwUUyiz/scene.splinecode');
