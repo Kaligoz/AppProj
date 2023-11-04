@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    /*background-color:#EEF0F4;*/
+    background-color:#EEF0F4;
     color: #432000;
     user-select: none;
     height: 100%;
@@ -15,7 +15,8 @@ html, body {
     max-width: 320px;
     margin: 30px auto;
     margin-top: 10%;
-    z-index: 2;
+    position: relative;
+    z-index: 1;
 }
 
 img {
@@ -83,14 +84,11 @@ ul li:hover {
 }
 
 canvas {
-    margin-top: -250px;
-    width: 400px; 
-    height: 300px; 
     position: absolute;
     display: block;
-    z-index: -1;
-    top: 0;
-    left: 0; 
-    transform: scale(0.7)
+    pointer-events: none;
+    top: 0; 
+    left: 50%;
+    transform: scale(1) translateX(-50%);
 }
   
